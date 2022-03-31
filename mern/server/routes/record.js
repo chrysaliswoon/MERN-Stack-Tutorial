@@ -51,6 +51,14 @@ recordRoutes.route("/record/add").post(function (req, response) {
 });
 
 
-
+// This section will help you update a record by id.
+recordRoutes.route("/update/:id").post(function (req, response) {
+  let db_connect = dbo.getDb();
+  let myobj = {
+    name: req.body.name,
+    position: req.body.position,
+    level: req.body.level,
+  };
+});
 
 module.exports = recordRoutes
